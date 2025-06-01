@@ -1,0 +1,107 @@
+.slider {
+    position: relative;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    overflow: hidden;
+    width: 100%;           /* of vaste breedte */
+    padding: 10px 0;
+  }
+  
+/* 2. Flex-track met oneindige scroll */
+.slider-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 60s linear infinite;
+  }
+  
+  /* 3. Ieder item als card */
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    height: 150px;
+    width: 300px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    margin-right: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* 4. Logo styling met grijs filter */
+  .logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 0.75rem;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  
+  /* 5. Naam in lichte kleur */
+  .name {
+    display: none;
+  }
+  
+  /* 6. Hover: card vergroot en logo wordt kleur */
+  .slide:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  .slide:hover .logo {
+    filter: none;
+  }
+  
+  /* gewoon van 0 → -50% (de helft van de track) */
+  @keyframes scroll {
+    from { transform: translateX(0%);             }
+    to   { transform: translateX(-100%);          }
+  }
+  
+  /* Tablet: scherm ≤ 768px */
+@media (max-width: 768px) {
+    .slider {
+      padding: 8px 0;
+    }
+    .slider-track {
+      animation-duration: 45s; /* iets sneller scrollen op smaller scherm */
+    }
+    .slide {
+      width: 220px;       /* smaller card */
+      height: 120px;      /* lager card */
+      margin-right: 0.75rem;
+      padding: 0.4rem 0.8rem;
+    }
+    .logo {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  
+  /* Mobiel: scherm ≤ 480px */
+  @media (max-width: 480px) {
+    .slider {
+      margin-bottom: 60px;
+      padding: 6px 0;
+    }
+    .slider-track {
+      animation-duration: 30s; /* nog sneller scrollen */
+    }
+    .slide {
+      width: 160px;
+      height: 100px;
+      margin-right: 0.5rem;
+      padding: 0.3rem 0.5rem;
+      border-radius: 0.5rem;
+    }
+    .logo {
+      width: 60px;
+      height: 60px;
+      margin-right: 0.5rem;
+    }
+  }
+  
+
+  

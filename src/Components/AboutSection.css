@@ -1,0 +1,436 @@
+.about-section {
+    position: relative;
+    margin-top: 100px;
+    margin-bottom: 700px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Top half: about + contact */
+  .about-top {
+    z-index: 999;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Zorg dat je sectie overflow-x: hidden heeft */
+.about-section {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  /* De wrapper voor je tekst, zonder extra linker-padding */
+  .about-text {
+    position: relative;
+    padding-left: 10px;
+  }
+  
+  /* De eigenlijke pill */
+  .pill {
+    display: flex;
+    align-items: center;
+    margin-left: 200px;
+    max-width: 900px;                /* of zoveel als je wilt */
+    height: 125px;                   /* hogere pill dan voorheen */
+    line-height: 48px;              /* centreren van de tekst verticaal */
+    padding: 0px -22px;                /* horizontale padding bepaalt de breedte */
+    
+    background: linear-gradient(
+      90deg,
+      #000000 0%,
+      #00ff00 100%
+    );
+    color: #fff;
+    font-size: 6rem;            /* 18px */
+    font-weight: 600;
+    /* alleen rechter zijden afronden */
+    border-radius: 0 24px 24px 0;
+    margin-bottom: 32px;            /* ruimte onder de pill en je paragrafen */
+  }
+  
+  /* Voor mobiel kun je ‘m iets smaller maken */
+  @media (max-width: 600px) {
+    .pill {
+      padding: 0 24px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 1rem;
+      border-radius: 0 20px 20px 0;
+    }
+  }
+
+  
+  
+  /* Text column */
+  .about-text {
+    flex: 1;
+    max-width: 800px;
+    font-family: "Cinzel", serif;
+  }
+
+  .about-text p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    margin-left: 200px;
+    font-family: 'Inter', sans-serif;
+
+  }
+  .about-text strong {
+    color: #00ff00;
+  }
+  
+  /* CONTACT-ROW: 3 items in één regel, left-group en right-group */
+.contact-row {
+    display: flex;
+    justify-content: space-between;  /* spreidt links- en rechts-groep uit */
+    align-items: center;
+    width: 100%;                     /* neemt volledige breedte van parent */
+    max-width: 550px;                /* of zoveel als je wilt */
+    margin-top: 32px;
+    margin-left: 200px;
+  }
+  
+  /* DE LINKSGROEP: stapel de twee links onder elkaar */
+  .contact-left {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .contact-right {
+    position: relative;
+}
+  
+  /* Algemene link-styling */
+  .contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .contact-link:hover {
+    color: #fff;
+  }
+  
+  .contact-link span {
+    font-size: 1.4rem;        /* vergroot de tekst, bijvoorbeeld van 0.95rem naar 1rem */
+    color: #eee;            /* lichter grijs of wit */
+    line-height: 1.4;
+  }
+  
+  /* Vergroot de icoontjes */
+  .contact-icon {
+    width: 50px;            /* van 20px naar 28px bijvoorbeeld */
+    height: 50px;
+  }
+  
+  
+  
+  /* Photo column */
+  .about-photo {
+    width: 600px;
+    height: 600px;
+    border-radius: 32px;
+    margin-right: 250px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.6);
+    flex-shrink: 0;
+  }
+  .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-bottom {
+    position: relative;
+    margin-top: 50px;
+    background: linear-gradient(90deg, #000, #00ff00);
+    width: 80vh;
+    border-radius: 0px 60px 60px 0px;
+    padding: 40px 150px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    box-shadow: inset 0 8px 20px rgba(255, 255, 255, 0.1), 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .about-cols {
+    display: flex;
+    gap: 300px;             /* ruimte tussen de twee kolommen */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* elke kolom krijgt de helft van de breedte */
+  .col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;             /* ruimte tussen items binnen de kolom */
+  }
+  
+  .about-bottom h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #fff;
+    font-family: "Cinzel", serif;
+  }
+  
+  .tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Maak de heading en tag naast elkaar */
+.info-column h3,
+.info-column .tag {
+  display: inline-block;      /* inline zodat ze op één lijn staan */
+  vertical-align: middle;     /* netjes verticaal centreren */
+}
+
+.info-column h3 {
+  margin-right: 12px;         /* ruimte tussen titel en tag */
+}
+
+.info-column .tag {
+  margin-bottom: 0;           /* overschrijf eventueel bestaande bottom-margin */
+}
+
+  
+  .skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  
+  .skill-icons img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+  .skill-icons img:hover {
+    transform: scale(1.1);
+  }
+
+  .info-column{
+    list-style: none;
+  }
+
+  .interest-list {
+    display: flex;
+    gap: 2rem;           /* hier bepaal je de ruimte tussen de items */
+    font-size: 1rem;
+    color: #f3f3f3;      /* of wat je huidige kleur is */
+    margin-top: 8px;     /* optioneel, ruimte onder de kop */
+  }
+  
+  .interest-list span {
+    white-space: nowrap; /* voorkomt dat de woorden afbreken */
+  }
+  
+  .soft-skill-list {
+    position: relative;                /* nodig voor de pseudo-lijn */
+    display: grid;
+    grid-template-columns: 1fr 1fr;    /* twee kolommen even breed */
+    gap: 0.75rem 2rem;                 /* rij- en kolom-gap */
+    padding: 0;                        /* weg met standaard padding */
+    margin: 0;                         /* weg met standaard margin */
+    list-style: none;                  /* geen bullets meer */
+    justify-items: start;      /* <-- items links uitlijnen */
+  }
+  
+  /* verticale scheidingslijn in het midden */
+  .soft-skill-list::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;                         /* precies in het midden */
+    width: 1px;
+    background-color: rgba(255,255,255,0.4);
+  }
+  
+  /* optioneel: wat extra padding zodat tekst niet tegen de lijn zit */
+  .soft-skill-list li {
+    padding: 0.3rem;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bolder;
+    line-height: 1.4;
+  }
+
+  /* voeg na elk íets uit de linker kolom een | toe */
+  .soft-skill-list li:nth-child(odd)::after {
+    margin-left: 0.5rem;
+    color: #fff;       /* of elke kleur die je gebruikt */
+  }
+  
+  /* voorkom een | als laatste item alleen in linker kolom */
+  /* (optioneel, want je hebt een even aantal) */
+  .soft-skill-list li:last-child:nth-child(odd)::after {
+    content: "";
+  }
+  
+  
+  /* geen bullets meer */
+  .soft-skill-list li {
+    list-style: none;
+    position: relative;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  
+  .info-column p,
+  .info-column ul {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f3f3f3;
+  }
+  
+  .info-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .info-column ul li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 14px;
+  }
+  
+  .info-column ul li::before {
+    position: absolute;
+    left: 0;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .about-top { flex-direction: column; }
+    .about-photo { margin-top: 40px; }
+  }
+  
+  /* Tablet: scherm ≤ 768px */
+@media (max-width: 768px) {
+    .about-top {
+        margin-left: -100px;
+        margin-top: -0px;
+      padding: 40px 16px;          /* minder padding */
+      width: 500px;
+    }
+    .about-text {
+        margin-left: 100px;
+      text-align: center;
+    }
+    .pill {
+        z-index: 9999;
+      height: auto;
+      line-height: 1.2;
+      font-size: 2.5rem;           /* veel kleiner */
+      padding: 0 24px;
+      margin-bottom: 24px;
+    }
+    .about-text p {
+      font-size: 0.95rem;
+    }
+    .contact-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .contact-left{
+        align-items: flex-start;
+      align-items: center;
+    }
+    .contact-link span {
+        align-items: flex-start;
+      font-size: 1.1rem;
+    }
+    .contact-icon {
+      width: 32px;
+      height: 32px;
+    }
+    .about-photo {
+      margin-left: 80px;
+      margin-right: 0px;
+      height: auto;
+      margin-top: 24px;
+    }
+        .about-cols {
+          flex-direction: column;
+          gap: 24px;
+        }
+      
+        .col {
+          align-items: center;
+          text-align: center;
+        }
+      
+        .about-bottom {
+            width: 100vw;
+        margin-left: 0px;
+          border-radius: 0;
+          padding: 32px 20px;
+        }
+      }
+        
+  /* Mobiel: scherm ≤ 480px */
+  @media (max-width: 480px) {
+    .about-top {
+      padding: 24px 12px;
+    }
+    .pill {
+     margin-left: -20px;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      padding: 0 16px;
+      border-radius: 0 16px 16px 0;
+    }
+    .about-text p {
+        text-align: left;
+      margin-left: -40px;
+      font-size: 0.9rem;
+      width: 330px;
+    }
+    .contact-row {
+        margin-left: 0px;
+      gap: 16px;
+    }
+    .contact-link span {
+      font-size: 1rem;
+    }
+    .contact-icon {
+        margin-left: 0px;
+      width: 28px;
+      height: 28px;
+    }
+    .about-photo {
+      width: 100%;
+      margin-top: 16px;
+    }
+    .about-bottom {
+      padding: 24px 12px;
+      gap: 16px;
+    }
+  }
+  

@@ -1,0 +1,136 @@
+.testimonial-section {
+    position: relative;
+    margin-top: 100px;
+    color: #fff;
+    padding: 80px 20px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .testimonial-header {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    text-align: left;
+  }
+  
+  .testimonial-header h2 {
+    font-family: "Cinzel", serif;
+    color: #00ff00;
+    font-size: 3rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-card {
+    background: #2f2f33;         /* donkerder charcoal i.p.v. grijs */
+    border: 1px solid #2e2e33;   /* subtiel randje voor contrast */
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .testimonial-card .top-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-card .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 2px solid #333;
+  }
+  
+  .testimonial-card .rating .star {
+    color: #00ff00;
+    font-size: 1.1rem;
+    margin-right: 4px;
+  }
+  
+  .testimonial-card .testimonial-text {
+    font-size: 0.95rem;
+    color: #ddd;
+    margin-bottom: 16px;
+    flex-grow: 1;
+  }
+  
+  .testimonial-card .testimonial-author {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-top: auto;
+    line-height: 1.3;
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-header h2 {
+      margin-top: -100px;
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .testimonial-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+  
+    .testimonial-cards {
+      grid-template-columns: 1fr; /* kaarten onder elkaar */
+      gap: 16px;
+      padding: 0 10px;
+    }
+  
+    .testimonial-card {
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .testimonial-card .top-row {
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+  
+    .testimonial-card .testimonial-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  
+    .testimonial-card .testimonial-author {
+      font-size: 0.85rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-header h2 {
+      font-size: 1.5rem;
+    }
+  
+    .testimonial-card {
+      padding: 16px;
+    }
+  
+    .testimonial-card .avatar {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .testimonial-card .rating .star {
+      font-size: 1rem;
+    }
+  }
+  

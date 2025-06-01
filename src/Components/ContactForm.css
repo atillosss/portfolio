@@ -1,0 +1,189 @@
+/* Full-bleed achtergrond met je “selfie” */
+.contact-section {
+    position: relative;
+    display: block;
+    margin: 150px auto;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+  }
+  
+  /* Subtiele donkere overlay voor leesbaarheid */
+  .contact-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+  }
+  
+  /* Form container met glas-effect */
+  .contact-form {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    background: url('/Users/atillosss/Desktop/PortfolioWebsite/portfolio-frontend/public/home-portet-achtergrond.png') center/cover no-repeat;
+
+    padding: 40px 30px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    margin-left: 14%;
+    z-index: 1;
+  }
+  
+  /* Titel */
+  .contact-form h2 {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  /* Input-wrapper */
+  .contact-form .inputs {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  /* Inputs & textarea styling */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+  }
+  
+  /* Focus-state */
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    background: rgba(255,255,255,0.3);
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.3);
+  }
+  
+  .contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;                        /* ruimte tussen icoon en tekst */
+    padding: 12px 32px;               /* verticale en horizontale padding */
+    background: linear-gradient(      /* zachte oranje gradient */
+      90deg,
+      rgba(64, 255, 0, 0.9) 0%,
+      rgba(72, 255, 0, 0.3) 100%
+    );
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;              /* pill-vorm */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background: linear-gradient(
+      90deg,
+      rgb(0, 0, 0) 0%,
+      rgba(33, 33, 32, 0.8) 100%
+    );
+    box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  }
+  
+  .contact-btn .icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+  
+  
+  /* Response bericht */
+  .contact-form .response {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      width: 100%;
+      margin: 100px auto;
+      padding: 0 16px;
+    }
+  
+    .contact-form {
+      max-width: 100%;
+      margin-left: 0;
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+  
+    .contact-form h2 {
+      font-size: 1.6rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.95rem;
+      padding: 10px 14px;
+    }
+  
+    .contact-btn {
+      font-size: 0.95rem;
+      padding: 10px 24px;
+    }
+  
+    .contact-btn .icon {
+      width: 24px;
+      height: 24px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-form {
+        margin-left: 0px;
+        width: 90vw;
+        padding: 10px;
+    }
+  
+    .contact-form h2 {
+      font-size: 1.4rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 0.9rem;
+      width: 80vw;
+    }
+  
+    .contact-btn {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+    }
+  
+    .contact-btn .icon {
+      width: 22px;
+      height: 22px;
+      font-size: 0.9rem;
+    }
+  }
+  

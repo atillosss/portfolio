@@ -1,0 +1,73 @@
+.tag-marquee {
+    display: block;
+    width: 100%;
+    background: #00ff00;
+    overflow: hidden;
+    white-space: nowrap;
+  
+    /* Responsieve verticale ruimte */
+    padding: 1rem 0;        /* 1rem boven en onder, schaalt mee met font-size */
+    font-size: 1.25rem;     /* je base font-size voor de tags */
+  
+    /* Optioneel: maximale en minimale hoogte */
+    min-height: 2.5rem;     /* nooit kleiner dan 2.5rem hoog */
+    max-height: 5rem;       /* nooit groter dan 5rem hoog */
+  }
+  
+  .tag-item {
+    display: inline-block;
+    margin: 0 2rem;
+    font-family: 'Inter', sans-serif;
+    font-size: inherit;     /* volgt de font-size uit .tag-marquee */
+    font-weight: bolder;
+    font-size: 4rem;
+    color: #000;
+  }
+  
+  .tag-sep {
+    display: inline-block;
+    font-family: "Cinzel", serif;
+    margin: 0 2rem;
+    color: black;
+    font-size: 5rem;
+    font-weight: bolder;
+    vertical-align: middle;
+  }
+  
+  @media (max-width: 768px) {
+    .tag-marquee {
+      font-size: 1rem;     /* kleiner font */
+    }
+  
+    .tag-item {
+      margin: 0 1rem;
+      font-size: 2rem;     /* kleiner, maar nog krachtig */
+    }
+  
+    .tag-sep {
+      margin: 0 1rem;
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .tag-marquee {
+      padding: 0.3rem 0;
+      font-size: 0.9rem;
+      min-height: 1.8rem;
+      max-height: 2.5rem;
+    }
+  
+    .tag-item {
+      margin: 0 0.75rem;
+      font-size: 1.5rem;
+    }
+  
+    .tag-sep {
+      margin: 0 0.75rem;
+      font-size: 2rem;
+    }
+  }
+  
+  
+  

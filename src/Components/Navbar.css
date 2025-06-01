@@ -1,0 +1,90 @@
+.navbar {
+  position: relative;
+  margin-top: 100px;
+  background-color: #252424;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: fit-content;
+  margin: 50px auto -10px; 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  font-family: sans-serif;
+  gap: 60px;
+  z-index: 999;
+}
+
+.nav-side {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-side a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+  transition: color 0.3s;
+}
+
+.nav-side a:hover {
+  color: #00ff00;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Tablet / smalle desktop */
+@media (max-width: 768px) {
+  .navbar {
+    width: 90%;               /* vul bijna de volle breedte */
+    max-width: 600px;         /* maar niet breder dan 600px */
+    padding: 8px 20px;        /* minder padding */
+    gap: 24px;                /* minder ruimte tussen items */
+    border-radius: 40px;      /* iets minder rond */
+  }
+  .nav-side {
+    gap: 16px;                /* minder tussen links */
+    flex-wrap: wrap;          /* laat links naar een 2e regel vloeien indien nodig */
+    justify-content: center;  /* core links centreren als er gewrapt is */
+  }
+  .nav-side a {
+    font-size: 18px;          /* iets kleinere tekst */
+  }
+  .logo-img {
+    height: 30px;             /* kleiner logo */
+  }
+}
+
+/* Mobiel */
+@media (max-width: 480px) {
+  .navbar {
+    width: 90vw;              /* full-bleed */
+    padding: 6px 12px;
+    gap: 12px;
+    border-radius: 30px 30px 30px 30px; /* of 0 0 0 0 als je geen hoeken wilt */
+  }
+  .nav-side {
+    gap: 12px;
+  }
+  .nav-side a {
+    font-size: 16px;
+    padding: 4px 8px;         /* vergroot de klikbare ruimte */
+  }
+  .logo-img {
+    height: 24px;
+  }
+}
+
+
+  

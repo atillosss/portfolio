@@ -1,0 +1,148 @@
+.arc-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .arc-images {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 0px;
+  }
+  
+  /* elk kaartje positioneren op de boog */
+  .arc-card {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px; /* iets rondere hoeken */
+    overflow: hidden;
+    box-shadow: 
+      0 8px 16px rgba(0, 0, 0, 0.4),        /* zwaardere drop shadow */
+      0 2px 4px rgba(0, 0, 0, 0.2);         /* subtiel randje als soft schaduw */
+    
+    /* Een gradient‐border door gebruik van background‐clip en padding */
+    padding: 2px; /* de breedte van de “schijnbare” border */
+    background: linear-gradient(
+      135deg,
+      rgba(0, 255, 17, 0.8) 0%,
+      rgba(166, 255, 0, 0.8) 100%
+    );
+    
+    /* We zetten de echte content (de foto) in een “inner” wrapper */
+    transform-origin: bottom center;
+    transform:
+      rotate(var(--angle))
+      translateY(-700px);
+  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .arc-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .arc-content{
+    position: relative;
+    margin-top: -300px;
+    margin-bottom: 00px;
+  }
+
+  .arc-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 0px;
+  }
+  
+  .arc-subtitle {
+    color: #bbb;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  
+  .arc-btn {
+    padding: 12px 32px;
+    background: #00ff00;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease;
+  }
+  
+  .arc-btn:hover {
+    background: #019701;
+  }
+  
+  @media (max-width: 768px) {
+    .arc-images {
+        margin-top: -450px;
+      height: 400px;
+    }
+  
+    .arc-card {
+      width: 140px;
+      height: 180px;
+      transform: rotate(var(--angle)) translateY(-320px);
+    }
+  
+    .arc-content {
+      margin-top: -180px;
+    }
+  
+    .arc-title {
+      font-size: 2rem;
+    }
+  
+    .arc-subtitle {
+      font-size: 1rem;
+    }
+  
+    .arc-btn {
+      padding: 10px 28px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .arc-images {
+      height: 300px;
+    }
+  
+    .arc-card {
+      width: 110px;
+      height: 140px;
+      transform: rotate(var(--angle)) translateY(-250px);
+    }
+  
+    .arc-content {
+      margin-top: -140px;
+    }
+  
+    .arc-title {
+      font-size: 1.6rem;
+    }
+  
+    .arc-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .arc-btn {
+      padding: 8px 24px;
+      font-size: 0.85rem;
+    }
+  }
+  
